@@ -5,6 +5,12 @@ module.exports = {
   ],
   theme: {
     extend: {  
+    colors:{
+      agro_green:"#008922",
+      agro_yellow:"#FACE0B",
+      light_green:"#AAE3A0",
+      agro_lightgreen:"#E5F7BA",
+    },
     screens:{
         'mob2': '320px',
         'mob': '412px',
