@@ -4,6 +4,7 @@ import Signup from "./Pages/Signup/Signup";
 import HomeSignUp from "./Pages/Home/HomeSignUp";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import DashboardContent from "./Pages/Dashboard/DashboardContent";
+import ManageStock from "./Pages/Orders/Supplier/ManageStock";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="/signup" element={<Signup />}/>
           <Route path="/dashboard" element={<Dashboard />}>
             <Route index element={<DashboardContent />}/>
+            <Route path="stockManage" element={<ManageStock />}/>
           </Route>
       </Routes>
     </BrowserRouter>
