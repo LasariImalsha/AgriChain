@@ -7,6 +7,8 @@ import hoverDashboardImg from '../../Assests/sidebar/hoverdashboard.png';
 
 
 function Sidebar() {
+  const userRole = "supplier";
+
   return (
     <div className='flex flex-col w-full '>
       <div className='flex flex-row items-center rounded-tl-lg bg-light_green'>
@@ -14,21 +16,46 @@ function Sidebar() {
         <h1 className='font-bold text-2xl tracking-wide text-agro_green'>HARVEST HUB</h1>
       </div>
       <div className='flex flex-col justify-center  gap-4 bg-agro_green mt-8 mx-4'>
-          <Link to="/dashboard">
-            <Button
-                btnName="DASHBOARD"
-                btnImg={dashboardImg}
-                hoverImg={hoverDashboardImg}
-            />
-          </Link>
 
-          <Link to="/dashboard">
+        {userRole === "supplier" && (
+        <>
+        <Link to="/dashboard">
           <Button
-                btnName="DASHBOARD"
-                btnImg={dashboardImg}
-                hoverImg={hoverDashboardImg}
-            />
-          </Link>
+            btnName="DASHBOARD"
+            btnImg={dashboardImg}
+            hoverImg={hoverDashboardImg}
+          />
+        </Link>
+
+        <Link to="/dashboard">
+          <Button
+            btnName="DASHBOARD"
+            btnImg={dashboardImg}
+            hoverImg={hoverDashboardImg}
+          />
+        </Link>
+        </>
+        )}
+
+        {userRole === "farmer" && (
+        <>
+        <Link to="/dashboard">
+          <Button
+            btnName="DASHBOARD"
+            btnImg={dashboardImg}
+            hoverImg={hoverDashboardImg}
+          />
+        </Link>
+
+        <Link to="/dashboard">
+          <Button
+            btnName="DASHBOARD"
+            btnImg={dashboardImg}
+            hoverImg={hoverDashboardImg}
+          />
+        </Link>
+        </>
+        )}
       </div>
     </div>
   )
