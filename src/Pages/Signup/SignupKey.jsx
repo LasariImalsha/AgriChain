@@ -24,7 +24,7 @@ function SignupKey() {
   return (
 <div className='mt-24 mob:border-2 border-light_green rounded-lg flex p-3 py-8 sm:mx-12 mob:mx-8 md:mx-0'>
   <div className='flex flex-col gap-8 px-6 '>
-    <h1 className='text-[13px] mob2:text-[15px] text-black/50 text-center'> Please Copy this username. 
+    <h1 className='mob:text-[13px] mob2:text-[15px] text-black/50 text-center'> Please Copy this username. 
     Once it's closed you aren't able to see the username again</h1>
     
     <div className='relative flex flex-row items-center justify-center'>
