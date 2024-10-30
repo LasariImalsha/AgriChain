@@ -1,9 +1,10 @@
 import React from 'react'
 import FarmerDashboard from './Farmer/FarmerDashboard'
 import SupplierDashboard from './Supplier/SupplierDashboard'
+import FarmerProfile from './Farmer/FarmerProfile'
 
 function DashboardContent() {
-    const userRole = "supplier"
+    const userRole = "farmer"
   return (
     <div className='flex flex-col'>
         {userRole  === "farmer" && (
