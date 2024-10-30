@@ -8,7 +8,7 @@ function DashboardContent() {
   return (
     <div className='flex flex-col'>
         {userRole  === "farmer" && (
-            <FarmerDashboard />
+            <FarmerProfile />
         )}
 
         {userRole === "supplier" && (
