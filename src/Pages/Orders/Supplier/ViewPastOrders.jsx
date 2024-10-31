@@ -151,7 +151,7 @@ function ViewPastOrders() {
                             <td className='px-6 py-3'>
                                 <button 
                                     className='px-4 py-2 rounded-md text-white font-semibold bg-agro_green/90 hover:bg-agro_green/50'
-                                    onClick={()=>navigate(`/dashboard/pastOrders/${row.order_id}`)}
+                                    onClick={()=>navigate(`/dashboard/orderDetails/${row.order_id}`)}
                                 >
                                     View
                                 </button>

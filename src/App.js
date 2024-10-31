@@ -7,6 +7,10 @@ import DashboardContent from "./Pages/Dashboard/DashboardContent";
 import ManageStock from "./Pages/Orders/Supplier/ManageStock";
 import ViewPastOrders from "./Pages/Orders/Supplier/ViewPastOrders";
 import CustomerPastOrderDetails from "./Pages/Orders/Supplier/OrderIdDetails/CustomerPastOrderDetails";
+import FarmerProfile from "./Pages/Dashboard/Farmer/FarmerProfile";
+import FarmerDashboard from "./Pages/Dashboard/Farmer/FarmerDashboard";
+import Cultivation from "./Pages/Cultivation/Cultivation";
+import FarmerOrders from "./Pages/Orders/Farmer/FarmerOrders";
 
 
 function App() {
@@ -20,7 +24,11 @@ function App() {
             <Route index element={<DashboardContent />}/>
             <Route path="stockManage" element={<ManageStock />}/>
             <Route path="pastOrders" element={<ViewPastOrders />}/>
-            <Route path="pastOrders/:orderID" element={<CustomerPastOrderDetails />}/>
+            <Route path="orderDetails/:orderID" element={<CustomerPastOrderDetails />}/>
+            <Route path="profile" element={<FarmerProfile />}/>
+            <Route path="myorders" element={<FarmerOrders />}/>
+            <Route path="products" element={<FarmerDashboard />}/>
+            <Route path="cultivate" element={<Cultivation />}/>
           </Route>
       </Routes>
     </BrowserRouter>
