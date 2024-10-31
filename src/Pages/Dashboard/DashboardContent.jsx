@@ -4,7 +4,7 @@ import SupplierDashboard from './Supplier/SupplierDashboard'
 import FarmerProfile from './Farmer/FarmerProfile'
 
 function DashboardContent() {
-    const userRole = "farmer"
+    const userRole = "supplier"
   return (
     <div className='flex flex-col'>
         {userRole  === "farmer" && (

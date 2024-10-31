@@ -10,7 +10,7 @@ function Button({ btnName, btnImg, hoverImg }) {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <img src={isHovered ? btnImg : btnImg} className='w-5 h-5' alt="icon" />
+        <img src={isHovered ? btnImg : btnImg} className='w-8 h-8' alt="icon" />
         <h1 className='text-sm font-bold '>{btnName}</h1>
       </button>
     </div>

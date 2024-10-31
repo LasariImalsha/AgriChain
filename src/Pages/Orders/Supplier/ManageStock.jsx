@@ -70,8 +70,8 @@ function ManageStock() {
     </div>
 
     {/* The Table starts here */}
-    <div className='flex flex-col rounded-lg mt-6 mx-4'>
-    <div className='flex flex-row w-full p-2 justify-between items-center'>
+    <div className='flex flex-col rounded-lg mt-6 '>
+    <div className='flex flex-row w-full  justify-between items-center'>
         <h1 className='font-semibold text-xl text-black/50'>Orders</h1>
         <div className='flex flex-row gap-3'>
             <input
@@ -89,7 +89,7 @@ function ManageStock() {
         </div>
     </div>
 
-    <div className='flex flex-col p-2'>
+    <div className='flex flex-col '>
         <TablePagination 
             component="div"
             rowsPerPageOptions={[2,10,25,50]}
@@ -101,7 +101,7 @@ function ManageStock() {
         />
         <div className='overflow-x-auto rounded-lg bg-agro_lightgreen/70'>
             <table className='min-w-full rounded-lg'>
-                <thead className='bg-agro_green text-white text-left'>
+                <thead className='bg-agro_green/90 text-white text-left'>
                     <tr>
                         <th className='px-6 py-3 text-xs'>No</th>
                         <th className='px-6 py-3 text-xs'>ItemID</th>
@@ -122,7 +122,7 @@ function ManageStock() {
                             <td className='px-6 py-3'>{row.Quantity}</td>
                             <td className='px-6 py-3'>
                                 <button 
-                                    className='px-4 py-2 rounded-md text-white font-semibold bg-agro_green hover:bg-agro_green/50'
+                                    className='px-4 py-2 rounded-md text-white font-semibold bg-agro_green/90 hover:bg-agro_green/50'
                                 >
                                     Update
                                 </button>

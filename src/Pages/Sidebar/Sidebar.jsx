@@ -6,21 +6,23 @@ import dashboardImg from '../../Assests/sidebar/dashboard.png';
 import hoverDashboardImg from '../../Assests/sidebar/hoverdashboard.png';
 import stockManage from '../../Assests/sidebar/stockManage.png';
 import hoverStockManage from '../../Assests/sidebar/hoverStockmanage.png';
+import pastOrders from '../../Assests/sidebar/pastOrders.png';
 
 
 function Sidebar() {
   const userRole = "supplier";
 
   return (
-    <div className='flex flex-col w-full '>
-      <div className='flex flex-row items-center bg-agro_lightgreen justify-center rounded-tl-lg  p-2'>
+    <div className='flex flex-col w-[280px] bg-light_green rounded-l-lg'>
+      <div className='flex flex-row items-center bg-agro_lightgreen rounded-tl-lg  p-2'>
         <img src={logo} className='w-16'/>
         <h1 className='font-bold text-[18px] text-center tracking-wide text-agro_green'>HARVEST HUB</h1>
       </div>
-      <div className='flex flex-col justify-center  gap-4  mt-8 mx-4'>
+      <div className='flex flex-col gap-8  mt-8 mx-4'>
 
         {userRole === "supplier" && (
         <>
+        {/* navigate to supplier dashboard */}
         <Link to="/dashboard">
           <Button
             btnName="DASHBOARD"
@@ -29,11 +31,21 @@ function Sidebar() {
           />
         </Link>
 
+        {/* navigate to stock management */}
         <Link to="/dashboard/stockManage">
           <Button
             btnName="MANAGE STOCK"
             btnImg={hoverStockManage}
             hoverImg={stockManage}
+          />
+        </Link>
+
+        {/* navigate to view past orders for supplier */}
+        <Link to="/dashboard/pastOrders">
+          <Button
+            btnName="PAST ORDERS"
+            btnImg={pastOrders}
+            hoverImg={pastOrders}
           />
         </Link>
         </>

@@ -5,6 +5,8 @@ import HomeSignUp from "./Pages/Home/HomeSignUp";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import DashboardContent from "./Pages/Dashboard/DashboardContent";
 import ManageStock from "./Pages/Orders/Supplier/ManageStock";
+import ViewPastOrders from "./Pages/Orders/Supplier/ViewPastOrders";
+import CustomerPastOrderDetails from "./Pages/Orders/Supplier/OrderIdDetails/CustomerPastOrderDetails";
 
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />}>
             <Route index element={<DashboardContent />}/>
             <Route path="stockManage" element={<ManageStock />}/>
+            <Route path="pastOrders" element={<ViewPastOrders />}/>
+            <Route path="pastOrders/:orderID" element={<CustomerPastOrderDetails />}/>
           </Route>
       </Routes>
     </BrowserRouter>
