@@ -12,11 +12,12 @@ import noprofile from '../../Assests/sidebar/profilenone.png';
 import products from "../../Assests/sidebar/products.png";
 import cultivate from '../../Assests/sidebar/cultivate.png';
 import myorders from '../../Assests/sidebar/myorders.png';
+import userlist from '../../Assests/sidebar/userList.png';
 
 
 function Sidebar() {
   const navigate = useNavigate();
-  const userRole = "supplier";
+  const userRole = "admin";
   const [logoutClick, setLogoutClick] = useState(false);
 
 
@@ -36,10 +37,7 @@ function Sidebar() {
     <div className='flex flex-col justify-between flex-grow mx-4'>
       <div className='flex flex-col gap-8 mt-8'>
 
-      {/* when the user is a supplier */}
-      {userRole === "supplier" && (
-        <>
-        {/* navigate to supplier dashboard */}
+      {/* navigate to the dashboard */}
         <Link to="/dashboard">
           <Button
             btnName="DASHBOARD"
@@ -47,6 +45,7 @@ function Sidebar() {
             hoverImg={dashboardImg}
           />
         </Link>
+
 
         {/* navigate to view all productst */}
         <Link to="/dashboard/products">
@@ -56,6 +55,10 @@ function Sidebar() {
           />
         </Link>
 
+
+      {/* when the user is a supplier */}
+      {userRole === "supplier" && (
+        <>
         {/* navigate to stock management */}
         <Link to="/dashboard/stockManage">
           <Button
@@ -89,16 +92,6 @@ function Sidebar() {
       {userRole === "farmer" && (
         <>
         {/* navigate to farmer dashboard */}
-        <Link to="/dashboard">
-          <Button
-            btnName="DASHBOARD"
-            btnImg={hoverDashboardImg}
-            hoverImg={hoverDashboardImg}
-          />
-        </Link>
-
-
-        {/* navigate to farmer dashboard */}
         <Link to="/dashboard/myorders">
           <Button
             btnName="MY ORDERS"
@@ -106,15 +99,6 @@ function Sidebar() {
           />
         </Link>
 
-
-        {/* navigate to all products */}
-        <Link to="/dashboard/products">
-          <Button
-            btnName="PRODUCTS"
-            btnImg={products}
-            hoverImg={hoverDashboardImg}
-          />
-        </Link>
 
         {/* navigate to all products */}
         <Link to="/dashboard/cultivate">
@@ -134,7 +118,30 @@ function Sidebar() {
         </Link>
         </>
         )}
+
+
+        {/* when the user is an admin */}
+        {userRole === "admin" && (
+        <>
+        {/* handle users */}
+        <Link to ="/dashboard/users">
+          <Button
+            btnName="USERS LIST"
+            btnImg={userlist}
+          />
+        </Link> 
+
+
+        <Link to ="/dashboard/profile">
+          <Button
+            btnName="PROFILE"
+            btnImg={profile}
+          />
+        </Link>           
+        </>
+        )}
       </div>
+
 
       {/* The username section in the sidebar */}
       <div className='flex flex-row items-center p-2 justify-between relative'>

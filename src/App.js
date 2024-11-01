@@ -11,6 +11,8 @@ import FarmerProfile from "./Pages/Dashboard/Farmer/FarmerProfile";
 import FarmerDashboard from "./Pages/Dashboard/Farmer/FarmerDashboard";
 import Cultivation from "./Pages/Cultivation/Cultivation";
 import FarmerOrders from "./Pages/Orders/Farmer/FarmerOrders";
+import Profile from "./Pages/Profile/Profile";
+import UserList from './Pages/UserManagement/UserList';
 
 
 function App() {
@@ -25,10 +27,11 @@ function App() {
             <Route path="stockManage" element={<ManageStock />}/>
             <Route path="pastOrders" element={<ViewPastOrders />}/>
             <Route path="orderDetails/:orderID" element={<CustomerPastOrderDetails />}/>
-            <Route path="profile" element={<FarmerProfile />}/>
+            <Route path="profile" element={<Profile />}/>
             <Route path="myorders" element={<FarmerOrders />}/>
             <Route path="products" element={<FarmerDashboard />}/>
             <Route path="cultivate" element={<Cultivation />}/>
+            <Route path="users" element={<UserList />}/>
           </Route>
       </Routes>
     </BrowserRouter>
